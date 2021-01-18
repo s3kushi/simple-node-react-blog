@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: stephengrider/client
+    - image: s3kushi/client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: 'src/**/*.js'
             dest: .
-    - image: stephengrider/comments
+    - image: s3kushi/comments
       context: comments
       docker:
         dockerfile: Dockerfile
@@ -24,7 +24,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/event-bus
+    - image: s3kushi/event-bus
       context: event-bus
       docker:
         dockerfile: Dockerfile
@@ -32,7 +32,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/moderation
+    - image: s3kushi/moderation
       context: moderation
       docker:
         dockerfile: Dockerfile
@@ -40,7 +40,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/posts
+    - image: s3kushi/posts
       context: posts
       docker:
         dockerfile: Dockerfile
@@ -48,7 +48,7 @@ build:
         manual:
           - src: '*.js'
             dest: .
-    - image: stephengrider/query
+    - image: s3kushi/query
       context: query
       docker:
         dockerfile: Dockerfile
